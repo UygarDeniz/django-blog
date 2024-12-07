@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <ul>
+          <li><a href="{% url 'blog:home' %}">Home</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'user:profile' %}">Profile</a></li>
+          <li><a href="{% url 'blog:post-new' %}">New Post</a></li>
+          <li>
+            <form
+              action="{% url 'user:logout' %}"
+              method="POST"
+              style="display: inline"
+            >
+              {% csrf_token %}
+              <button type="submit" class="logout-button">Logout</button>
+            </form>
+          </li>
+
+          <p>Welcome {{ user.username }}</p>
+          {% else %}
+          <li><a href="{% url 'user:register' %}">Register</a></li>
+          <li><a href="{% url 'user:login' %}">Login</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+    <div class="content">{% block content %} {% endblock %}</div>
+  </body>
+</html>

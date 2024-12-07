@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %} 
+
+{% block title %}
+{{ post.title }}
+{% endblock title %} 
+
+{% block content %}
+<div class="container mt-4">
+  <div class="post-detail">
+    <h1 class="post-title">{{ post.title }}</h1>
+    <p class="post-meta">
+            By <strong>{{ post.author.username }}</strong> on {{ post.created_at|date:"F j, Y, g:i a" }}
+        </p>
+    
+    <div class="post-content">{{ post.content|linebreaks }}</div>
+        {% if user.username == post.author.username %}
+        <a href="{% url "blog:post-update" post.id %}" class="btn btn-secondary"> Update </a>
+        <a href="{% url "blog:post-delete" post.id %}" class="btn btn-secondary">  Delete </a>
+        {% endif %}
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% extends "blog/base.html" %}
+{% block title %}Update Profile{% endblock title %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Update Profile</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="user-form-group">
+            {{ user_form.username.label_tag }}
+            {{ user_form.username }}
+            {% if user_form.username.errors %}
+                <div class="user-form-error">
+                    {{ user_form.username.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="user-form-group">
+            {{ user_form.email.label_tag }}
+            {{ user_form.email }}
+            {% if user_form.email.errors %}
+                <div class="user-error">
+                    {{ user_form.email.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="user-form-group">
+            {{ profile_form.profile_image.label_tag }}
+            {{ profile_form.profile_image }}
+            {% if profile_form.profile_image.errors %}
+                <div class="user-form-error">
+                    {{ profile_form.profile_image.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="user-form-group">
+            {{ profile_form.bio.label_tag }}
+            {{ profile_form.bio }}
+            {% if profile_form.bio.errors %}
+                <div class="user-form-error">
+                    {{ profile_form.bio.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary">Update Profile</button>
+    </form>
+</div>
+{% endblock content %}

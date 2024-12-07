@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+        <div class="user-form-error">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+    <div class="user-form-group">
+        {{ form.title.label_tag }}
+        {{ form.title }}
+        {% if form.title.errors %}
+            <div class="user-form-error">
+                {{ form.title.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="user-form-group">
+        {{ form.content.label_tag }}
+        {{ form.content }}
+        {% if form.content.errors %}
+            <div class="user-form-error">
+                {{ form.content.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <button type="submit" class="user-form-btn btn-primary">Save Post</button>
+</form>
+
+{% endblock content%}

@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #333;
+  height: 40px;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul li {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header nav ul form {
+  display: inline;
+}
+
+.header nav ul button,
+.header nav ul .logout-button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.header nav ul button:hover,
+.header nav ul .logout-button:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* USER FORMS */
+.user-form-group {
+  margin-bottom: 15px;
+}
+
+.user-form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.user-form-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-form-btn:hover {
+  background-color: #555;
+}
+
+.user-form-error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* PROFILE */
+
+.profile-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 4px 20px 4px 0px ;
+    
+}
+
+.profile-card-body {
+    padding: 15px;
+}
+
+.profile-card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.profile-card-text {
+    font-size: 1em;
+    color: #666;
+}
+
+.profile-details {
+    flex: 1;
+    max-width: 600px;
+}
+
+.profile-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.profile-list {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-list-item strong {
+    display: inline-block;
+    width: 100px;
+}
+
+
+/* POST DETAIL */
+
+.post-detail {
+  margin-top: 20px;
+}
+
+.post-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.card-title {
+  text-decoration: None;
+  color: black;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 10px 15px;
+  color: #007bff;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.page-link:hover {
+  background-color: #f8f9fa;
+  border-color: #ddd;
+}
